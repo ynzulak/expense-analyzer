@@ -1,0 +1,16 @@
+# virtual environment
+venv/
+.env/
+
+# cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# system
+.DS_Store
+
+# dane (jeśli masz np. csv/json)
+data/
