@@ -36,15 +36,36 @@ def analyzer(data):
 
             grouped_date[date].append(amount)
 
-
-            
         for date, amounts in grouped_date.items():
             tosum = sum(amounts)
             print("Your total spent money at", date, "is: ", round(tosum, 2))
         return grouped_date
     
-    daily_total()
+    # daily_total()
     print("===========================")
-    monthly_total()
+    # monthly_total()
+
+
+
+    def category():
+        grouped_category = {}
+
+        for x in data:
+            category = x["Category"]
+
+            amount = x["Amount"]
+
+            if category not in grouped_category:
+                grouped_category[category] = []
+                grouped_category[category].append(amount)
+
+        for category, amounts in grouped_category.items():
+            tosum = sum(amounts)
+            print("Twoje wydatki na", category.lower(), "wyniosły: ", round(tosum, 2))
+
+        return grouped_category
+    
+    category()
+
     return data
     
