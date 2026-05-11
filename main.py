@@ -10,7 +10,6 @@ def main():
     data = normalize(data)
     data = analyzer(data)
     # print("=================")
-    # print(data)
 
 
 
